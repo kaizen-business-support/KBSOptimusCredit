@@ -1,0 +1,176 @@
+{
+  "liquidite": {
+    "liquidite_generale": {
+      "min": 1.0,
+      "optimal": 1.5,
+      "max": 3.0,
+      "poids": 25,
+      "description": "Capacité à honorer les dettes à court terme"
+    },
+    "liquidite_reduite": {
+      "min": 0.8,
+      "optimal": 1.2,
+      "max": 2.0,
+      "poids": 15,
+      "description": "Liquidité sans les stocks"
+    },
+    "liquidite_immediate": {
+      "min": 0.2,
+      "optimal": 0.4,
+      "max": 1.0,
+      "poids": 10,
+      "description": "Trésorerie disponible immédiatement"
+    }
+  },
+  "structure_financiere": {
+    "autonomie_financiere": {
+      "min": 30.0,
+      "optimal": 50.0,
+      "max": 80.0,
+      "poids": 25,
+      "description": "Part des capitaux propres dans le financement"
+    },
+    "endettement_global": {
+      "min": 20.0,
+      "optimal": 50.0,
+      "max": 70.0,
+      "poids": 20,
+      "description": "Niveau d'endettement total"
+    },
+    "couverture_charges_financieres": {
+      "min": 2.0,
+      "optimal": 5.0,
+      "max": 15.0,
+      "poids": 15,
+      "description": "Capacité à couvrir les charges financières"
+    }
+  },
+  "rentabilite": {
+    "roe": {
+      "min": 5.0,
+      "optimal": 15.0,
+      "max": 30.0,
+      "poids": 20,
+      "description": "Rentabilité des capitaux propres"
+    },
+    "roa": {
+      "min": 2.0,
+      "optimal": 8.0,
+      "max": 20.0,
+      "poids": 15,
+      "description": "Rentabilité de l'actif total"
+    },
+    "marge_nette": {
+      "min": 3.0,
+      "optimal": 10.0,
+      "max": 25.0,
+      "poids": 15,
+      "description": "Marge bénéficiaire nette"
+    },
+    "marge_exploitation": {
+      "min": 5.0,
+      "optimal": 15.0,
+      "max": 30.0,
+      "poids": 10,
+      "description": "Marge d'exploitation"
+    }
+  },
+  "activite": {
+    "rotation_actif": {
+      "min": 0.8,
+      "optimal": 1.5,
+      "max": 3.0,
+      "poids": 15,
+      "description": "Efficacité d'utilisation de l'actif"
+    },
+    "rotation_stocks": {
+      "min": 4.0,
+      "optimal": 8.0,
+      "max": 20.0,
+      "poids": 10,
+      "description": "Vitesse de rotation des stocks"
+    },
+    "delai_recouvrement": {
+      "min": 15.0,
+      "optimal": 30.0,
+      "max": 60.0,
+      "poids": 10,
+      "description": "Délai de recouvrement des créances (jours)"
+    }
+  },
+  "gestion": {
+    "productivite_personnel": {
+      "min": 1.0,
+      "optimal": 2.5,
+      "max": 5.0,
+      "poids": 10,
+      "description": "Productivité du personnel"
+    },
+    "charges_personnel_va": {
+      "min": 20.0,
+      "optimal": 40.0,
+      "max": 60.0,
+      "poids": 8,
+      "description": "Part des charges de personnel dans la VA"
+    },
+    "cafg_ca": {
+      "min": 5.0,
+      "optimal": 12.0,
+      "max": 25.0,
+      "poids": 7,
+      "description": "Capacité d'autofinancement sur CA"
+    }
+  },
+  "scoring": {
+    "excellent": {
+      "min": 85,
+      "max": 100,
+      "classe": "A+",
+      "description": "Performance exceptionnelle"
+    },
+    "tres_bon": {
+      "min": 70,
+      "max": 84,
+      "classe": "A",
+      "description": "Très bonne performance"
+    },
+    "bon": {
+      "min": 55,
+      "max": 69,
+      "classe": "B",
+      "description": "Performance satisfaisante"
+    },
+    "moyen": {
+      "min": 40,
+      "max": 54,
+      "classe": "C",
+      "description": "Performance moyenne"
+    },
+    "faible": {
+      "min": 25,
+      "max": 39,
+      "classe": "D",
+      "description": "Performance faible"
+    },
+    "tres_faible": {
+      "min": 0,
+      "max": 24,
+      "classe": "E",
+      "description": "Performance très faible"
+    }
+  },
+  "seuils_alerte": {
+    "liquidite_critique": 0.8,
+    "endettement_excessif": 80.0,
+    "rentabilite_insuffisante": 3.0,
+    "rotation_actif_faible": 0.5,
+    "delai_recouvrement_long": 90.0
+  },
+  "metadata": {
+    "version": "2.0.0",
+    "date_creation": "2024-01-15",
+    "derniere_maj": "2024-07-20",
+    "source": "BCEAO - Direction de la Supervision Bancaire",
+    "conformite": "Normes prudentielles BCEAO 2024"
+  }
+}

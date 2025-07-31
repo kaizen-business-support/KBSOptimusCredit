@@ -1,0 +1,125 @@
+{
+  "bceao_norms": {
+    "version": "2024",
+    "description": "Normes prudentielles BCEAO pour l'analyse financière",
+    "last_updated": "2024-12-01",
+    
+    "solvabilite": {
+      "ratio_fonds_propres_base": {
+        "minimum": 5.0,
+        "objectif": 7.0,
+        "unite": "pourcentage",
+        "description": "Fonds propres de base / Actifs pondérés par les risques"
+      },
+      "ratio_fonds_propres_tier1": {
+        "minimum": 6.625,
+        "objectif": 8.5,
+        "unite": "pourcentage",
+        "description": "Fonds propres Tier 1 / Actifs pondérés par les risques"
+      },
+      "ratio_solvabilite_global": {
+        "minimum": 8.625,
+        "objectif": 11.5,
+        "unite": "pourcentage",
+        "description": "Total fonds propres / Actifs pondérés par les risques"
+      },
+      "coussin_conservation": {
+        "minimum": 2.5,
+        "objectif": 2.5,
+        "unite": "pourcentage",
+        "description": "Coussin de conservation obligatoire"
+      }
+    },
+    
+    "liquidite": {
+      "ratio_liquidite_court_terme": {
+        "minimum": 75.0,
+        "objectif": 100.0,
+        "unite": "pourcentage",
+        "description": "Actifs liquides / Passifs exigibles court terme"
+      },
+      "coeff_couverture_emplois_mlt": {
+        "minimum": 100.0,
+        "objectif": 120.0,
+        "unite": "pourcentage",
+        "description": "Ressources stables / Emplois moyen et long terme"
+      },
+      "ratio_transformation": {
+        "maximum": 100.0,
+        "objectif": 80.0,
+        "unite": "pourcentage",
+        "description": "Emplois long terme / Ressources long terme"
+      }
+    },
+    
+    "division_risques": {
+      "ratio_division_risques": {
+        "maximum": 65.0,
+        "objectif": 50.0,
+        "unite": "pourcentage",
+        "description": "Engagements sur un client / Fonds propres"
+      },
+      "limite_grands_risques": {
+        "maximum": 8.0,
+        "objectif": 6.0,
+        "unite": "multiple",
+        "description": "Somme grands risques / Fonds propres"
+      },
+      "engagements_apparentes": {
+        "maximum": 20.0,
+        "objectif": 15.0,
+        "unite": "pourcentage",
+        "description": "Engagements apparentés / Fonds propres"
+      }
+    },
+    
+    "qualite_portefeuille": {
+      "taux_creances_douteuses": {
+        "maximum": 5.0,
+        "objectif": 3.0,
+        "unite": "pourcentage",
+        "description": "Créances douteuses / Total créances"
+      },
+      "taux_provisionnement": {
+        "minimum": 80.0,
+        "objectif": 100.0,
+        "unite": "pourcentage",
+        "description": "Provisions / Créances douteuses"
+      }
+    },
+    
+    "rentabilite": {
+      "roa_minimum": {
+        "minimum": 1.0,
+        "objectif": 2.0,
+        "unite": "pourcentage",
+        "description": "Résultat net / Total actifs"
+      },
+      "roe_minimum": {
+        "minimum": 10.0,
+        "objectif": 15.0,
+        "unite": "pourcentage",
+        "description": "Résultat net / Fonds propres"
+      },
+      "coefficient_exploitation": {
+        "maximum": 65.0,
+        "objectif": 55.0,
+        "unite": "pourcentage",
+        "description": "Charges exploitation / Produits d'exploitation"
+      }
+    },
+    
+    "capital": {
+      "capital_minimum": {
+        "montant": 20000000000,
+        "unite": "FCFA",
+        "description": "Capital social minimum requis",
+        "echeance": "2023"
+      },
+      "refinancement_bceao": {
+        "minimum": 60.0,
+        "unite": "pourcentage",
+        "description": "Part minimum crédits éligibles au refinancement"
+      }
+    }
+  },

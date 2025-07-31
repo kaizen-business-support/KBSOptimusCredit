@@ -1,0 +1,125 @@
+"""
+Analyseur financier principal - Version simplifiée
+"""
+
+import json
+from pathlib import Path
+from typing import Dict, Any, Optional
+
+class FinancialAnalyzer:
+    """Analyseur financier principal conforme aux normes BCEAO"""
+    
+    def __init__(self):
+        self.bceao_norms = {}
+        self.sectoral_norms = {}
+        self.load_reference_data()
+    
+    def load_reference_data(self):
+        """Charge les données de référence (normes BCEAO et sectorielles)"""
+        try:
+            # Chargement des normes BCEAO
+            bceao_path = Path(__file__).parent.parent.parent / "data" / "bceao_norms.json"
+            if bceao_path.exists():
+                with open(bceao_path, 'r', encoding='utf-8') as f:
+                    self.bceao_norms = json.load(f)
+                print("✓ Normes BCEAO chargées avec succès")
+            else:
+                print(f"⚠ Fichier non trouvé: {bceao_path}")
+                self.bceao_norms = self._get_default_bceao_norms()
+            
+            # Chargement des normes sectorielles
+            sectoral_path = Path(__file__).parent.parent.parent / "data" / "sectoral_norms.json"
+            if sectoral_path.exists():
+                with open(sectoral_path, 'r', encoding='utf-8') as f:
+                    self.sectoral_norms = json.load(f)
+                print("✓ Normes sectorielles chargées avec succès")
+            else:
+                print(f"⚠ Fichier non trouvé: {sectoral_path}")
+                self.sectoral_norms = self._get_default_sectoral_norms()
+                
+        except json.JSONDecodeError as e:
+            print(f"❌ Erreur de format JSON: {e}")
+            print(f"Ligne {e.lineno}, colonne {e.colno}")
+            self.bceao_norms = self._get_default_bceao_norms()
+            self.sectoral_norms = self._get_default_sectoral_norms()
+        except Exception as e:
+            print(f"❌ Erreur chargement données de référence: {e}")
+            self.bceao_norms = self._get_default_bceao_norms()
+            self.sectoral_norms = self._get_default_sectoral_norms()
+    
+    def _get_default_bceao_norms(self):
+        """Retourne des normes BCEAO par défaut"""
+        return {
+            "liquidite": {
+                "liquidite_generale": {"min": 1.0, "optimal": 1.5, "max": 3.0, "poids": 25}
+            },
+            "structure_financiere": {
+                "autonomie_financiere": {"min": 30.0, "optimal": 50.0, "max": 80.0, "poids": 25}
+            },
+            "rentabilite": {
+                "roe": {"min": 5.0, "optimal": 15.0, "max": 30.0, "poids": 20}
+            }
+        }
+    
+    def _get_default_sectoral_norms(self):
+        """Retourne des normes sectorielles par défaut"""
+        return {
+            "commerce": {
+                "liquidite_generale": {"q1": 1.1, "median": 1.5, "q3": 2.2},
+                "autonomie_financiere": {"q1": 25.0, "median": 40.0, "q3": 55.0}
+            }
+        }
+    
+    def analyze_excel_file(self, file_path: str, secteur: str = None) -> Dict[str, Any]:
+        """Analyse complète à partir d'un fichier Excel"""
+        try:
+            # Pour le moment, retourner des données de test
+            return {
+                'financial_data': {
+                    'total_actif': 1000000,
+                    'capitaux_propres': 400000,
+                    'resultat_net': 50000
+                },
+                'ratios': {
+                    'liquidite_generale': 1.5,
+                    'autonomie_financiere': 40.0,
+                    'roe': 12.5
+                },
+                'scores': {
+                    'score_total': 75,
+                    'classe': 'B'
+                },
+                'recommendations': [
+                    "Améliorer la liquidité",
+                    "Optimiser la structure financière"
+                ],
+                'metadata': {
+                    'secteur': secteur,
+                    'version': '2.0.0'
+                }
+            }
+        except Exception as e:
+            print(f"❌ Erreur lors de l'analyse: {e}")
+            return None
+    
+    def calculate_ratios(self, financial_data: Dict[str, float]) -> Dict[str, float]:
+        """Calcule les ratios financiers de base"""
+        ratios = {}
+        
+        try:
+            # Ratios de liquidité
+            if financial_data.get('actif_circulant', 0) > 0 and financial_data.get('dettes_court_terme', 0) > 0:
+                ratios['liquidite_generale'] = financial_data['actif_circulant'] / financial_data['dettes_court_terme']
+            
+            # Autonomie financière
+            if financial_data.get('total_actif', 0) > 0:
+                ratios['autonomie_financiere'] = (financial_data.get('capitaux_propres', 0) / financial_data['total_actif']) * 100
+            
+            # ROE
+            if financial_data.get('capitaux_propres', 0) > 0:
+                ratios['roe'] = (financial_data.get('resultat_net', 0) / financial_data['capitaux_propres']) * 100
+                
+        except Exception as e:
+            print(f"❌ Erreur calcul ratios: {e}")
+        
+        return ratios

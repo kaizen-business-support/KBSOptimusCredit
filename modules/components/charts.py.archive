@@ -1,0 +1,102 @@
+import plotly.graph_objects as go
+import plotly.express as px
+from plotly.subplots import make_subplots
+import pandas as pd
+
+def create_radar_chart(scores, categories):
+    """Crée un graphique radar des scores"""
+    fig = go.Figure()
+    
+    max_scores = {'liquidite': 40, 'solvabilite': 40, 'rentabilite': 30, 'activite': 15, 'gestion': 15}
+    
+    # Normaliser les scores
+    values_normalized = [scores[cat]/max_scores[cat]*10 for cat in categories]
+    
+    fig.add_trace(go.Scatterpolar(
+        r=values_normalized + [values_normalized[0]],
+        theta=categories + [categories[0]],
+        fill='toself',
+        name='Performance',
+        line_color='rgb(46, 125, 50)',
+        fillcolor='rgba(76, 175, 80, 0.3)'
+    ))
+    
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(
+                visible=True,
+                range=[0, 10]
+            )),
+        showlegend=True,
+        title="Performance par Catégorie"
+    )
+    
+    return fig
+
+def create_waterfall_chart(flux_data):
+    """Crée un graphique waterfall des flux de trésorerie"""
+    fig = go.Figure(go.Waterfall(
+        name="Flux de Trésorerie",
+        orientation="v",
+        measure=["absolute", "relative", "relative", "relative", "total"],
+        x=["Ouverture", "Opérationnels", "Investissement", "Financement", "Clôture"],
+        y=[
+            flux_data.get('tresorerie_ouverture', 0),
+            flux_data.get('flux_activites_operationnelles', 0),
+            flux_data.get('flux_activites_investissement', 0),
+            flux_data.get('flux_activites_financement', 0),
+            flux_data.get('tresorerie_cloture', 0)
+        ],
+        connector={"line": {"color": "rgb(63, 63, 63)"}},
+    ))
+    
+    fig.update_layout(title="Évolution de la Trésorerie")
+    return fig
+
+def create_sectoral_comparison(ratios, secteur_data):
+    """Crée un graphique de comparaison sectorielle"""
+    if not secteur_data:
+        return None
+    
+    fig = go.Figure()
+    
+    # Ajouter les ratios de l'entreprise
+    for ratio_name, values in secteur_data.items():
+        if ratio_name in ratios:
+            entreprise_val = ratios[ratio_name]
+            q1, median, q3 = values['q1'], values['median'], values['q3']
+            
+            # Barres de quartiles
+            fig.add_trace(go.Bar(
+                name=f'{ratio_name} - Q1-Q3',
+                x=[ratio_name],
+                y=[q3-q1],
+                base=[q1],
+                marker_color='lightblue',
+                opacity=0.6
+            ))
+            
+            # Médiane
+            fig.add_trace(go.Scatter(
+                x=[ratio_name],
+                y=[median],
+                mode='markers',
+                marker=dict(color='blue', size=10),
+                name='Médiane secteur'
+            ))
+            
+            # Valeur entreprise
+            fig.add_trace(go.Scatter(
+                x=[ratio_name],
+                y=[entreprise_val],
+                mode='markers',
+                marker=dict(color='red', size=12),
+                name='Votre entreprise'
+            ))
+    
+    fig.update_layout(
+        title="Comparaison avec les Benchmarks Sectoriels",
+        barmode='overlay'
+    )
+    
+    return fig

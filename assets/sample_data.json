@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "entreprise": "Société d'Exemple SARL",
+    "secteur": "commerce",
+    "exercice": "2023",
+    "devise": "XOF",
+    "date_creation": "2024-07-19",
+    "commentaires": "Données d'exemple pour démonstration de l'outil d'analyse financière BCEAO"
+  },
+  "bilan_actif": {
+    "immobilisations_incorporelles": {
+      "frais_etablissement": 5000000,
+      "brevets_licences": 8000000,
+      "fonds_commercial": 12000000,
+      "autres_immobilisations_incorporelles": 3000000,
+      "total_immobilisations_incorporelles": 28000000
+    },
+    "immobilisations_corporelles": {
+      "terrains": 85000000,
+      "batiments": 120000000,
+      "materiel_mobilier": 45000000,
+      "materiel_transport": 25000000,
+      "materiel_technique": 35000000,
+      "agencements_installations": 15000000,
+      "immobilisations_en_cours": 8000000,
+      "avances_acomptes": 2000000,
+      "total_immobilisations_corporelles": 335000000
+    },
+    "immobilisations_financieres": {
+      "participations": 18000000,
+      "creances_rattachees": 3000000,
+      "prets": 5000000,
+      "autres_immobilisations_financieres": 2000000,
+      "total_immobilisations_financieres": 28000000
+    },
+    "total_actif_immobilise": 391000000,
+    "actif_circulant": {
+      "stocks": {
+        "marchandises": 42000000,
+        "matieres_premieres": 18000000,
+        "produits_finis": 15000000,
+        "produits_en_cours": 8000000,
+        "total_stocks": 83000000
+      },
+      "creances": {
+        "clients": 65000000,
+        "autres_debiteurs": 12000000,
+        "etat": 8000000,
+        "comptes_transitoires": 3000000,
+        "total_creances": 88000000
+      },
+      "tresorerie_actif": {
+        "banques": 25000000,
+        "ccp": 3000000,
+        "caisse": 2000000,
+        "total_tresorerie_actif": 30000000
+      },
+      "total_actif_circulant": 201000000
+    },
+    "total_actif": 592000000
+  },
+  "bilan_passif": {
+    "capitaux_propres": {
+      "capital_social": 150000000,
+      "reserves": {
+        "reserve_legale": 7500000,
+        "autres_reserves": 25000000,
+        "total_reserves": 32500000
+      },
+      "report_a_nouveau": 15000000,
+      "resultat_net": 28500000,
+      "total_capitaux_propres": 226000000
+    },
+    "dettes_financieres": {
+      "emprunts_etablissements_credit": 120000000,
+      "emprunts_obligataires": 50000000,
+      "autres_dettes_financieres": 15000000,
+      "total_dettes_financieres": 185000000
+    },
+    "dettes_circulantes": {
+      "fournisseurs": 85000000,
+      "dettes_fiscales": 18000000,
+      "dettes_sociales": 12000000,
+      "autres_dettes": 8000000,
+      "comptes_transitoires": 4000000,
+      "provisions": 12000000,
+      "total_dettes_circulantes": 139000000
+    },
+    "tresorerie_passif": {
+      "concours_bancaires": 42000000,
+      "total_tresorerie_passif": 42000000
+    },
+    "total_passif": 592000000
+  },
+  "compte_resultat": {
+    "exploitation": {
+      "chiffre_affaires": 485000000,
+      "variation_stocks": 5000000,
+      "production_immobilisee": 2000000,
+      "subventions_exploitation": 3000000,
+      "autres_produits": 8000000,
+      "total_produits_exploitation": 503000000,
+      "achats_matieres": 245000000,
+      "variation_stocks_matieres": -3000000,
+      "transports": 15000000,
+      "services_exterieurs": 45000000,
+      "impots_taxes": 12000000,
+      "charges_personnel": 85000000,
+      "dotations_amortissements": 25000000,
+      "autres_charges": 18000000,
+      "total_charges_exploitation": 442000000,
+      "resultat_exploitation": 61000000
+    },
+    "financier": {
+      "produits_financiers": 5000000,
+      "charges_financieres": 18000000,
+      "resultat_financier": -13000000
+    },
+    "exceptionnel": {
+      "produits_exceptionnels": 3000000,
+      "charges_exceptionnelles": 2000000,
+      "resultat_exceptionnel": 1000000
+    },
+    "participation_salaries": 2500000,
+    "impot_societes": 18000000,
+    "resultat_net": 28500000
+  },
+  "flux_tresorerie": {
+    "activites_exploitation": {
+      "resultat_net": 28500000,
+      "dotations_amortissements": 25000000,
+      "variation_stocks": -8000000,
+      "variation_creances": -12000000,
+      "variation_dettes": 8000000,
+      "autres_variations": -1500000,
+      "flux_exploitation": 40000000
+    },
+    "activites_investissement": {
+      "acquisitions_immobilisations": -35000000,
+      "cessions_immobilisations": 5000000,
+      "variation_immobilisations_financieres": -3000000,
+      "flux_investissement": -33000000
+    },
+    "activites_financement": {
+      "augmentation_capital": 0,
+      "nouveaux_emprunts": 25000000,
+      "remboursements_emprunts": -18000000,
+      "dividendes_verses": -12000000,
+      "flux_financement": -5000000
+    },
+    "variation_tresorerie": 2000000,
+    "tresorerie_debut": 26000000,
+    "tresorerie_fin": 28000000
+  },
+  "ratios_calcules": {
+    "liquidite": {
+      "liquidite_generale": 1.45,
+      "liquidite_reduite": 0.85,
+      "liquidite_immediate": 0.22
+    },
+    "solvabilite": {
+      "autonomie_financiere": 0.38,
+      "endettement_global": 0.62,
+      "couverture_charges_financieres": 3.39
+    },
+    "rentabilite": {
+      "rentabilite_economique": 0.103,
+      "rentabilite_financiere": 0.126,
+      "marge_nette": 0.059,
+      "marge_exploitation": 0.126
+    },
+    "gestion": {
+      "rotation_stocks": 5.84,
+      "duree_credit_clients": 49,
+      "duree_credit_fournisseurs": 71,
+      "rotation_actif": 0.82
+    },
+    "structure": {
+      "intensite_capitalistique": 0.66,
+      "poids_bfr": 0.095,
+      "couverture_immobilisations": 0.58
+    }
+  },
+  "scoring": {
+    "score_global": 72,
+    "scores_categories": {
+      "liquidite": 75,
+      "solvabilite": 68,
+      "rentabilite": 78,
+      "gestion": 70,
+      "structure": 69
+    },
+    "niveau": "SATISFAISANT",
+    "commentaire": "Situation financière globalement saine avec des points d'amélioration identifiés"
+  },
+  "benchmarks_sectoriels": {
+    "secteur": "commerce",
+    "comparaisons": {
+      "liquidite_generale": {
+        "entreprise": 1.45,
+        "q1": 1.20,
+        "mediane": 1.40,
+        "q3": 1.65,
+        "position": "mediane"
+      },
+      "autonomie_financiere": {
+        "entreprise": 0.38,
+        "q1": 0.25,
+        "mediane": 0.35,
+        "q3": 0.45,
+        "position": "mediane"
+      },
+      "rentabilite_economique": {
+        "entreprise": 0.103,
+        "q1": 0.06,
+        "mediane": 0.09,
+        "q3": 0.13,
+        "position": "q3"
+      }
+    }
+  },
+  "recommandations": {
+    "priorite_haute": [
+      "Améliorer la couverture des charges financières en réduisant l'endettement",
+      "Optimiser la gestion du BFR par une meilleure rotation des stocks"
+    ],
+    "priorite_moyenne": [
+      "Diversifier les sources de financement",
+      "Renforcer la trésorerie disponible"
+    ],
+    "priorite_faible": [
+      "Maintenir le niveau de rentabilité actuel",
+      "Surveiller l'évolution du secteur"
+    ]
+  },
+  "plan_action": {
+    "objectifs_6_mois": {
+      "liquidite": "Améliorer la liquidité réduite de 0.85 à 1.00",
+      "endettement": "Réduire le ratio d'endettement de 62% à 55%",
+      "rentabilite": "Maintenir la marge nette au-dessus de 5.5%"
+    },
+    "actions_concretes": [
+      {
+        "action": "Négocier des délais de paiement plus longs avec les fournisseurs",
+        "delai": "30 jours",
+        "responsable": "Direction Financière",
+        "impact": "Amélioration BFR"
+      },
+      {
+        "action": "Optimiser la gestion des stocks par mise en place d'un système de rotation",
+        "delai": "90 jours",
+        "responsable": "Direction Logistique",
+        "impact": "Réduction des stocks dormants"
+      },
+      {
+        "action": "Renégocier les conditions des emprunts bancaires",
+        "delai": "60 jours",
+        "responsable": "Direction Générale",
+        "impact": "Réduction des charges financières"
+      }
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "agriculture": {
+    "liquidite_generale": {
+      "q1": 1.2,
+      "median": 1.8,
+      "q3": 2.5,
+      "moyenne": 1.9
+    },
+    "autonomie_financiere": {
+      "q1": 35.0,
+      "median": 45.0,
+      "q3": 60.0,
+      "moyenne": 47.5
+    },
+    "roe": {
+      "q1": 8.0,
+      "median": 12.0,
+      "q3": 18.0,
+      "moyenne": 13.2
+    },
+    "rotation_actif": {
+      "q1": 0.9,
+      "median": 1.3,
+      "q3": 1.8,
+      "moyenne": 1.4
+    },
+    "marge_nette": {
+      "q1": 4.0,
+      "median": 7.5,
+      "q3": 12.0,
+      "moyenne": 8.1
+    }
+  },
+  "commerce": {
+    "liquidite_generale": {
+      "q1": 1.1,
+      "median": 1.5,
+      "q3": 2.2,
+      "moyenne": 1.6
+    },
+    "autonomie_financiere": {
+      "q1": 25.0,
+      "median": 40.0,
+      "q3": 55.0,
+      "moyenne": 41.2
+    },
+    "roe": {
+      "q1": 10.0,
+      "median": 16.0,
+      "q3": 25.0,
+      "moyenne": 17.8
+    },
+    "rotation_actif": {
+      "q1": 1.8,
+      "median": 2.5,
+      "q3": 3.5,
+      "moyenne": 2.7
+    },
+    "rotation_stocks": {
+      "q1": 6.0,
+      "median": 10.0,
+      "q3": 15.0,
+      "moyenne": 10.8
+    },
+    "marge_nette": {
+      "q1": 2.5,
+      "median": 5.0,
+      "q3": 8.5,
+      "moyenne": 5.4
+    }
+  },
+  "industrie": {
+    "liquidite_generale": {
+      "q1": 1.3,
+      "median": 1.7,
+      "q3": 2.4,
+      "moyenne": 1.8
+    },
+    "autonomie_financiere": {
+      "q1": 40.0,
+      "median": 55.0,
+      "q3": 70.0,
+      "moyenne": 56.8
+    },
+    "roe": {
+      "q1": 6.0,
+      "median": 11.0,
+      "q3": 17.0,
+      "moyenne": 11.9
+    },
+    "rotation_actif": {
+      "q1": 0.7,
+      "median": 1.1,
+      "q3": 1.6,
+      "moyenne": 1.2
+    },
+    "marge_nette": {
+      "q1": 5.0,
+      "median": 9.0,
+      "q3": 15.0,
+      "moyenne": 10.1
+    },
+    "endettement_global": {
+      "q1": 30.0,
+      "median": 45.0,
+      "q3": 60.0,
+      "moyenne": 46.3
+    }
+  },
+  "services": {
+    "liquidite_generale": {
+      "q1": 1.0,
+      "median": 1.4,
+      "q3": 2.0,
+      "moyenne": 1.5
+    },
+    "autonomie_financiere": {
+      "q1": 30.0,
+      "median": 45.0,
+      "q3": 65.0,
+      "moyenne": 47.8
+    },
+    "roe": {
+      "q1": 12.0,
+      "median": 18.0,
+      "q3": 28.0,
+      "moyenne": 20.1
+    },
+    "rotation_actif": {
+      "q1": 1.2,
+      "median": 1.8,
+      "q3": 2.8,
+      "moyenne": 2.0
+    },
+    "marge_nette": {
+      "q1": 6.0,
+      "median": 12.0,
+      "q3": 20.0,
+      "moyenne": 13.5
+    },
+    "productivite_personnel": {
+      "q1": 1.8,
+      "median": 2.8,
+      "q3": 4.2,
+      "moyenne": 3.0
+    }
+  },
+  "btp": {
+    "liquidite_generale": {
+      "q1": 0.9,
+      "median": 1.2,
+      "q3": 1.8,
+      "moyenne": 1.3
+    },
+    "autonomie_financiere": {
+      "q1": 20.0,
+      "median": 35.0,
+      "q3": 50.0,
+      "moyenne": 36.4
+    },
+    "roe": {
+      "q1": 5.0,
+      "median": 9.0,
+      "q3": 15.0,
+      "moyenne": 10.2
+    },
+    "rotation_actif": {
+      "q1": 1.0,
+      "median": 1.5,
+      "q3": 2.2,
+      "moyenne": 1.6
+    },
+    "marge_nette": {
+      "q1": 3.0,
+      "median": 6.0,
+      "q3": 10.0,
+      "moyenne": 6.8
+    },
+    "delai_recouvrement": {
+      "q1": 45.0,
+      "median": 65.0,
+      "q3": 90.0,
+      "moyenne": 68.2
+    }
+  },
+  "transport": {
+    "liquidite_generale": {
+      "q1": 1.1,
+      "median": 1.5,
+      "q3": 2.1,
+      "moyenne": 1.6
+    },
+    "autonomie_financiere": {
+      "q1": 25.0,
+      "median": 40.0,
+      "q3": 58.0,
+      "moyenne": 42.1
+    },
+    "roe": {
+      "q1": 7.0,
+      "median": 12.0,
+      "q3": 19.0,
+      "moyenne": 13.1
+    },
+    "rotation_actif": {
+      "q1": 0.8,
+      "median": 1.3,
+      "q3": 1.9,
+      "moyenne": 1.4
+    },
+    "marge_nette": {
+      "q1": 4.0,
+      "median": 8.0,
+      "q3": 13.0,
+      "moyenne": 8.9
+    },
+    "endettement_global": {
+      "q1": 42.0,
+      "median": 60.0,
+      "q3": 75.0,
+      "moyenne": 59.8
+    }
+  },
+  "metadata": {
+    "source": "BCEAO - Études sectorielles 2023-2024",
+    "periode": "2022-2024",
+    "echantillon": {
+      "agriculture": 145,
+      "commerce": 320,
+      "industrie": 180,
+      "services": 275,
+      "btp": 95,
+      "transport": 110
+    },
+    "derniere_maj": "2024-07-15",
+    "version": "1.2.0",
+    "notes": "Données basées sur les états financiers audités des entreprises de l'UEMOA"
+  }
+}
